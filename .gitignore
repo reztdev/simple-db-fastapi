@@ -1,0 +1,7 @@
+/.pytest_cache
+/__pycache__
+/include
+/lib
+/node_modules
+/share
+/lib64

@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="!isLoggedIn">
+            <h2>Login</h2>
+            <input type="email" v-model="loginData.email" placeholder="Email"><br>
+            <input type="password" v-model="loginData.password" placeholder="Password"><br>
+            <button @click="login">Login</button>
+        </div>
+        <div v-else>
+            <h2>Welcome, {{ userData.name }}</h2>
+            <button @click="logout">Logout</button>
+        </div>
+        <div>
+            <h2>Register</h2>
+            <input type="text" v-model="registerData.name" placeholder="Name"><br>
+            <input type="email" v-model="registerData.email" placeholder="Email"><br>
+            <input type="password" v-model="registerData.password" placeholder="Password"><br>
+            <button @click="register">Register</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
